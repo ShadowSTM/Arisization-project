@@ -1,0 +1,117 @@
+label key:
+
+    play sound "Menu.mp3" noloop
+    $ key = renpy.input("Veuillez écrire votre clé d'accès.")
+    $ key = key.strip()
+
+    if key in ["ARIS-DEVS", "ARIS-8J4K-F9Q7-2XZB-IJ3G-R83F-1IE9-D9BU-WHFB-OU8I", "ARIS-GRFN-M4A1"]:
+        "Jeu déverrouillé."
+        play sound "Menu.mp3" noloop
+
+    else: 
+        "Erreur système. Veuillez réessayer."
+        $ renpy.restart_interaction()
+        jump key 
+
+    show screen logo()
+    
+    transform unrotate: 
+        zoom 0.5
+        rotate 360 
+        linear 2.0 rotate 0 
+ 
+    "{b}{i}Bienvenu dans Arisization Project cher/chére lycéen, Ce jeu appartient à SLTM.{/i}{/b}"   
+    play sound "Click.mp3" noloop
+
+    hide screen logo
+
+    "{b}{i} Attention : Ce jeu contient des scénes qui peuvent mettre mal à l'aise certains joueurs, ce jeu est aussi inspiré de faits réels.{/i}{/b}"   
+    play sound "Click.mp3" noloop
+
+label auto_save: 
+    
+    $ renpy.save("auto-1")                           
+
+# choix de prénom et nom de lycéen  
+
+label identity:
+
+    play sound "Menu.mp3" noloop
+    $ prénom = renpy.input("Quel est votre prénom de lycéen ?")
+    $ prénom = prénom.strip()   
+
+    play sound "Menu.mp3" noloop
+    $ nom = renpy.input("Quel est votre nom de lycéen ?")
+    $ nom = nom.strip()   
+
+    play sound "Menu.mp3" noloop
+    $ pronom = renpy.input("Quel est votre genre ? ( il ou elle )")
+    $ pronom = pronom.strip()   
+
+    if pronom == "il" or "elle": 
+
+        "Le pronom a été enregistré dans le système." 
+        play sound "Menu.mp3" noloop 
+
+    if pronom == "il":
+        $ domaine = "Ultime Créateur"
+
+    elif pronom == "elle":
+        $ domaine = "Ultime Créatrice"
+
+    else: 
+
+        "Erreur système. Veuillez réessayer." 
+        $ renpy.restart_interaction() 
+        play sound "Menu.mp3" noloop 
+        jump identity
+
+    if prénom in ["Iris", "Hajime", "Kendo", "Naoto", "Haruki", "Yuki", "Emily", "Kazumi", "Ayano", "Aiko", "Akeno", "Subaru", "Suzune", "Shiro"]:
+        "Ce prénom n'est pas autorisé."
+        jump identity  
+    
+    elif prénom == "Aris":
+        R "Cher joueur/chère joueuse je ne suis pas sûre qu’avoir le prénom Aris soit une bonne idée pour la suite de l'histoire veuillez changer de prénom s'il vous plaît."
+        jump identity  
+
+    elif key == "ARIS-8J4K-F9Q7-2XZB-IJ3G-R83F-1IE9-D9BU-WHFB-OU8I":
+        $ A = Character("AK-24", color="#00eeff")
+        $ origine = "la chambre grise" 
+        jump début 
+
+    elif prénom == "Helian" and nom == "Griffin" and pronom == "il" and key == "ARIS-GRFN-M4A1":
+        $ P = Character('[prénom] [nom]', color="#707070") 
+        $ S = Character("Subaru", color="#707070")
+        $ origine = "16LAB" 
+        $ success += 1 
+
+    elif prénom == "Dev" and nom == "Kageno" and pronom == "il" or "elle" and key == "ARIS-DEVS":
+
+        play sound "Menu.mp3" noloop
+        $ newname = renpy.input("Veuillez écrire le nouveau prénom de [A].")
+        $ newname = newname.strip()
+
+        if newname == "Aris":
+
+            "Le prénom a été enregistré dans le système." 
+            play sound "Menu.mp3" noloop
+
+            show screen Dev 
+              
+            jump test 
+
+        else:
+
+            "Erreur système. Veuillez réessayer."
+            $ renpy.restart_interaction() 
+            play sound "Menu.mp3" noloop
+            jump identity
+
+        "{b}{i} DLC secret intégré déverouillé.{/i}{/b}"
+        play sound "Click.mp3" noloop 
+
+        jump début  
+
+    elif nom in ["Kusanagi", "Natsumi", "Ayanokoji", "Sato", "Saotome", "Hiiragi", "Katsuragi", "Hanemiya", "Enoshima", "Hoshino", "Shinomiya", "Katsuya", "Horimiya"]:
+        "Ce nom n'est pas autorisé."
+        jump identity 
