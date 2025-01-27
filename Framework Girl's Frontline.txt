@@ -43,16 +43,6 @@ Partie 4 :
  
         $ S = Character('Subaru Shinomiya', color="#ff8800")
 
-Partie 5 : 
-
-    if prénom == "Helian" and nom == "Griffin" and pronom == "il" and key == "ARIS-GRFN-M4A1":
-
-        play music "DLCsoundtrack2.mp3" loop volume 1.0
-         
-    else: 
- 
-        play music "Soundtrack2.mp3" loop volume 1.0
-
 Clé d'accés : 
 
         ARIS-GRFN-M4A1 
