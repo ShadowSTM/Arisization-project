@@ -310,6 +310,9 @@ label identity:
         $ origine = "16LAB" 
         $ success += 1 
 
+        "{b}{i} DLC secret intégré déverouillé.{/i}{/b}"
+        play sound "Click.mp3" noloop 
+
     elif prénom == "Dev" and nom == "Kageno" and pronom == "il" or "elle" and key == "ARIS-DEVS":
 
         play sound "Menu.mp3" noloop
@@ -331,9 +334,6 @@ label identity:
             $ renpy.restart_interaction() 
             play sound "Menu.mp3" noloop
             jump identity
-
-        "{b}{i} DLC secret intégré déverouillé.{/i}{/b}"
-        play sound "Click.mp3" noloop 
 
         jump début  
 
@@ -466,7 +466,7 @@ label hack:
         R "Veuillez choisir mon nom technique parmi ceux disponible dans ma base de données."
         play sound "Click.mp3" noloop 
 
-        menu :    
+        menu :
 
             "{b}{i}Choisir M4A1{/i}{/b}" :
                 $ A = Character("M4A1", color="#00ff00")
@@ -475,10 +475,13 @@ label hack:
                 $ A = Character("M16A1", color="#ffa600") 
 
             "{b}{i}Choisir ST AR-15{/i}{/b}" :
-                $ A = Character("ST AR-15", color="#f8a4cb") 
+                $ A = Character("ST AR-15", color="#ff8fc3") 
                 
             "{b}{i}Choisir M4 SOPMOD II{/i}{/b}" :
-                $ A = Character("M4 SOPMOD II", color="#ff4a4a") 
+                $ A = Character("M4 SOPMOD II", color="#ff4a4a")
+
+            "{b}{i}Choisir UMP45{/i}{/b}" :
+                $ A = Character("UMP45", color="#8a8aff")
 
         P "Attend on dirait qu'elle est en train de démarrer."
         play sound "Menu.mp3" noloop 
@@ -5260,9 +5263,9 @@ label choice9:
     P "[A] !? Comment êtes-vous au courant de ce nom !?"
     play sound "Click.mp3" noloop 
 
-    if A == "M4A1" or "M16A1" or "ST AR-15" or "M4 SOPMOD II" and prénom == "Helian" and nom == "Griffin" and pronom == "il" and key == "ARIS-GRFN-M4A1":
+    if A == "M4A1" or "M16A1" or "ST AR-15" or "M4 SOPMOD II" or "UMP45" and prénom == "Helian" and nom == "Griffin" and pronom == "il" and key == "ARIS-GRFN-M4A1":
 
-        C "C'est simple je suis son créateur et son concepteur original et je vois que tu as aussi choisis entre M4A1 et M16A1."
+        C "C'est simple je suis son créateur et son concepteur original et je vois que tu as aussi choisi son nom technique."
         play sound "Click.mp3" noloop 
 
         P "C'est donc vous à l'origine de [A] et oui j'ai choisi le nom technique."
@@ -5277,10 +5280,10 @@ label choice9:
         C "Oui dit moi."
         play sound "Click.mp3" noloop 
 
-        P "Pourquoi elle avait ces deux noms dans sa base de données."
+        P "Pourquoi elle avait ces multiples noms dans sa base de données."
         play sound "Click.mp3" noloop 
 
-        C "Car elle a été conçu pour utilser quatres fusils en particulier pendant la guerre la M4A1, la M16A1, la ST AR-15 et la M4 SOPMOD II justement."
+        C "Car elle a été conçu pour utilser plusieurs fusils en particulier, ceux enregistrés dans sa base de données justement."
         play sound "Click.mp3" noloop 
 
         P "Ok je vois et J'ai toujours voulu connaître la personne qui a conçu [A]."
@@ -8203,6 +8206,17 @@ label test:
 
     P "Ah..."
     play sound "Menu.mp3" noloop 
+
+    hide screen room 
+    scene black
+    play sound "Click.mp3" noloop 
+
+    "{b}{i}Tu quittes le dortoir.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    scene hallway 
+    show screen hallway 
+    play sound "Door.mp3" noloop 
 
     return 
 
