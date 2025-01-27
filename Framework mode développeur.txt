@@ -1,0 +1,24 @@
+
+partie 1
+
+    screen Dev():
+        frame:
+            xalign 0.5
+            ypos 10 
+            has vbox  
+
+            text "Developper mode":
+                size 20
+                xalign 0.5 
+
+partie 2
+
+    if key == "ARIS-DEVS" and pronom == "il"
+
+        "{b}{i}Run test : [P], l'[domaine] origine de [origine] accompagné de [A]{/i}{/b}"
+        play sound "Click.mp3" noloop   
+
+    elif key == "ARIS-DEVS" and pronom == "elle" 
+
+        "{b}{i}Run test : [P], l'[domaine] origine de [origine] accompagnée de [A]{/i}{/b}"
+        play sound "Click.mp3" noloop   

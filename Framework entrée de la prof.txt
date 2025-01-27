@@ -1,0 +1,15 @@
+    play sound "Door.mp3" noloop
+    "{b}{i}.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    M "Bonjour."
+    play sound "Click.mp3" noloop
+
+    R "Bonjour Madame."
+    play sound "Click.mp3" noloop
+
+    P "Bonjour."
+    play sound "Click.mp3" noloop
+
+    A "Bonjour.~"
+    play sound "Click.mp3" noloop

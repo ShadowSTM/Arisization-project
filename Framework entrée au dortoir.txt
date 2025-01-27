@@ -1,0 +1,8 @@
+    scene black
+    hide screen hallway
+
+    "{b}{i}Tu entres dans ton dortoir.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene room
+    show screen room 

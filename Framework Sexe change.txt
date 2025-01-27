@@ -1,0 +1,10 @@
+
+    if pronom == "il":
+
+        P "text"
+        play sound "Click.mp3" noloop
+
+    elif pronom == "elle": 
+
+        P "text"
+        play sound "Click.mp3" noloop 

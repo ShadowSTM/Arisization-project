@@ -1,0 +1,14 @@
+    "{b}{i}Le cours continua sans probléme.{/i}{/b}"
+    play sound "Bell.mp3" noloop 
+
+    M "Le cours est terminé vous pouvez quitter la salle."
+    play sound "Click.mp3" noloop 
+
+    hide screen class_404
+    scene black 
+
+    "{b}{i} Vous sortez de la salle de classe.{/i}{/b}"
+    play sound "Door.mp3" noloop
+
+    scene hallway 
+    show screen hallway 

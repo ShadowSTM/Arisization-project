@@ -1,0 +1,11 @@
+
+    screen logo():
+        frame:
+            yalign 0.5
+            xalign 0.5  
+            add "Images/logo.JPG" at unrotate
+
+    transform unrotate:
+        zoom 0.5
+        rotate 360 
+        linear 2.0 rotate 0    

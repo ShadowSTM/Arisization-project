@@ -1,0 +1,24 @@
+
+Dialogue d'un personnage : 
+
+    E "Texte"
+    play sound "Click.mp3" noloop
+
+Dialogue de narration : 
+
+    "{b}{i}Texte au passé.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+Dialogue en italique : 
+
+    "{i}Texte.{/i}"
+    play sound "Click.mp3" noloop
+
+Dialogue en gras : 
+
+    "{b}Texte.{/b}"
+    play sound "Click.mp3" noloop
+
+texte de repérage : 
+
+    # texte 

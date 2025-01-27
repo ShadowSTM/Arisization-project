@@ -1,0 +1,9 @@
+
+    scene staircase
+    hide screen hall 
+
+    "{b}{i}Tu continues vers le couloir avec [Na].{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    scene hallway
+    show screen hallway

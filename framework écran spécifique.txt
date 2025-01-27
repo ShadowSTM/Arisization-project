@@ -1,0 +1,14 @@
+    screen example():
+        frame:
+            xalign 0.99
+            ypos 10 
+            has vbox  
+
+            text "example":
+                size 50
+                xalign 0.5 
+
+
+    show screen example()
+
+    hide screen example

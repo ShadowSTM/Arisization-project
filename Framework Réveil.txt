@@ -1,0 +1,21 @@
+    "{b}{i}Tu te changea avant d'aller de te coucher.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    scene black
+    hide screen room
+    hide screen day
+
+    "{b}{i} Le lendemain.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    scene room 
+    show screen room
+    show screen day
+    $ day += 1
+
+    play sound "Alarm.mp3" noloop 
+    P "Oh déjà...."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} Tu te léves tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop 

@@ -1,0 +1,33 @@
+    play sound "Menu.mp3" noloop 
+
+    menu :    
+
+        "{b}{i} aller à.{/i}{/b}" :
+            jump suite1
+
+        "{b}{i} aller à.{/i}{/b}" : 
+
+            scene black
+            hide screen hall
+
+            "{b}{i}Tu entras dans la bibliothéque.{/i}{/b}"
+            play sound "Door.mp3" noloop  
+            
+            scene library 
+            hide screen 
+
+            Na "Je ne suis pas sûr que c'est le moment d'être ici."
+            play sound "Click.mp3" noloop   
+
+            scene black 
+            hide screen library 
+
+            "{b}{i}Tu quittas la piéce.{/i}{/b}" 
+            play sound "Door.mp3" noloop    
+
+            scene hall
+            show screen hall 
+
+            jump choice10
+
+label suite1:

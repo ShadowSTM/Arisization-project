@@ -1,0 +1,16 @@
+    scene black 
+    hide screen clubroom
+
+    play music "gameover.mp3" noloop
+    "{b}{i}Fin numéro.{/i}{/b}"
+    play sound "Menu.mp3" noloop
+    
+    menu :    
+
+        "{b}{i}Abandonner{/i}{/b}" :
+            return 
+        "{b}{i}Réessayer.{/i}{/b}" : 
+            scene clubroom
+            show screen clubroom
+            play music "Soundtrack.mp3" loop volume 1.0
+            jump choice5

@@ -1,0 +1,64 @@
+    Na "[prénom], je détecte une nouvelle mise à jour, veux-tu la faire ?"
+    play sound "Menu.mp3" noloop 
+
+    menu : 
+
+        "{b}{i} Refuser la mise à jour {/i}{/b}" :
+
+            P "Non merci."
+            play sound "Click.mp3" noloop
+
+            Na "Ok alors."
+            play sound "Click.mp3" noloop
+
+            jump afterupdate
+        
+        "{b}{i} faire la mise à jour {/i}{/b}" : 
+        
+            Na "Bien je lance la mise à jour"
+            play sound "Click.mp3" noloop
+
+            P "Merci."
+            play sound "Click.mp3" noloop
+
+            Na "Initialisation de la mise à jour en cours."
+            play sound "Click.mp3" noloop
+
+            Na "10%"
+            play sound "Click.mp3" noloop
+
+            Na "20%"
+            play sound "Click.mp3" noloop
+
+            Na "30%"
+            play sound "Click.mp3" noloop
+
+            Na "40%"
+            play sound "Click.mp3" noloop
+
+            Na "50%"
+            play sound "Click.mp3" noloop
+
+            Na "60%"
+            play sound "Click.mp3" noloop
+
+            Na "70%"
+            play sound "Click.mp3" noloop
+
+            Na "80%"
+            play sound "Click.mp3" noloop
+
+            Na "90%"
+            play sound "Click.mp3" noloop
+
+            Na "100%"
+            play sound "Click.mp3" noloop
+
+            Na "Vérication...."
+            play sound "Click.mp3" noloop
+            $ upt += 1.5
+
+            Na "Mise à jour terminée, la version actuelle est maintenant la [upt]."
+            play sound "Click.mp3" noloop 
+
+label afterupdate:

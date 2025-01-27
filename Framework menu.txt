@@ -1,0 +1,8 @@
+    play sound "Menu.mp3" noloop 
+
+    menu :    
+
+        "{b}{i}choix 1{/i}{/b}" :
+            jump choix1
+        "{b}{i}choix 2.{/i}{/b}" : 
+            jump choix2 
