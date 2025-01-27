@@ -299,7 +299,7 @@ screen navigation():
 
             textbutton _("Nouvelle partie") action Start()
 
-        else:
+        else: 
 
             textbutton _("Historique") action ShowMenu("history")
 
@@ -325,12 +325,9 @@ screen navigation():
             ## mobiles.
             textbutton _("Aide") action ShowMenu("help")
 
-        if renpy.variant("pc"):
+        if renpy.variant("pc"):  
 
-            ## Le bouton pour quitter est banni sur iOS et inutile sur Android
-            ## et sur le Web.
-            textbutton _("Quitter") action Quit(confirm=not main_menu)
-
+            textbutton _("Quitter ton robot") action Quit(confirm=not main_menu) 
 
 style navigation_button is gui_button
 style navigation_button_text is gui_button_text
@@ -566,17 +563,29 @@ screen about():
             if gui.about:
                 text "[gui.about!t]\n"
 
-            text _("Conçu avec {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
+            text _("Conçu avec {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]\n")
 
-            label "Crédits"
+            text _("Site officiel du visual novel : {a=https://arisizationproject.odoo.com/}Arisization Project{/a}\n")
+
+            text _("Github officiel du projet : {a=https://github.com/ShadowSTM/Arisization-project}Github{/a}\n")
+
+            label "Crédits\n" 
             
-            text _("Développé par Seydou N'Doye ( Shadow_STM ).") 
+            text _("Développé par Seydou N'Doye ( Shadow_SLTM ).\n") 
+            
+            text _("Idées par Seydou N'Doye ( Shadow_SLTM ) et d'autres collaborateurs.\n")
 
-            text _("Idées par Seydou N'Doye ( Shadow_STM ).")
+            text _("Image du menu par Seydou N'Doye ( Shadow_SLTM ).\n") 
 
-            text _("Image du menu par Seydou N'Doye ( Shadow_STM ).") 
+            text _("Image windows fais par Sararnbb.\n")
 
-            text _("Image window fais par Sararnbb.")
+            text _("Dessin de [Su] dessiné par Sararnbb.\n")  
+
+            text _("Idée du personnage de [Sk] par Kama.\n") 
+
+            text _("Musiques utilisées libres de droits.\n") 
+
+            
 
 style about_label is gui_label
 style about_label_text is gui_label_text
@@ -1632,3 +1641,5 @@ style slider_vbox:
 style slider_slider:
     variant "small"
     xsize 900
+
+
