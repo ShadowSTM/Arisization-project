@@ -7887,13 +7887,13 @@ label test:
     "{b}{i} Quand tu rentres en classe [S] vient vers toi.{/i}{/b}"
     play sound "Click.mp3" noloop
 
-    S "Hey [preénom] je peux te parler deux minutes s'il te plait ?"
+    S "Hey [prénom] je peux te parler deux minutes s'il te plait ?"
     play sound "Click.mp3" noloop 
 
     P "Pourquoi faire !?"
     play sound "Click.mp3" noloop 
 
-    S "Je trouve que tu fais un trop maiin"
+    S "Je trouve que tu fais un trop malin."
     play sound "Click.mp3" noloop 
 
     P "Comment ça ?"
@@ -7908,7 +7908,7 @@ label test:
     S "Pardon !?"
     play sound "Click.mp3" noloop 
 
-    P "Oui va coder et programmer en Assembly et on verra si c'est facile."
+    P "Oui va coder et programmer en Assembleur et on verra si c'est facile."
     play sound "Click.mp3" noloop 
 
     "{b}{i}[S] s'éloigna....{/i}{/b}"
@@ -7969,7 +7969,7 @@ label test:
     play sound "Click.mp3" noloop
 
     P "Attends... Je crois que..."
-    play sound "Click.mp3" noloop
+    play sound "Stumble.mp3" fadeout 3.0
 
     "{b}{i}Ton corps ne tient plus, et tu t'effondres à genoux. Des exclamations inquiètes remplissent la pièce.{/i}{/b}"
     play sound "Click.mp3" noloop
@@ -7978,21 +7978,23 @@ label test:
     play sound "Click.mp3" noloop
 
     "{b}{i}Tu perçois vaguement la voix d'[newname] au loin avant que tout devienne noir.{/i}{/b}"
-    play sound "Heartbeat.mp3" fadeout 3.0
+    play sound "Click.mp3" noloop
 
     scene black 
-    hide screen classroom
     hide screen class_404 
 
     if pronom == "il":
 
         "{b}{i}Quelques instants plus tard, tu te réveilles dans ta chambre, couché sur ton lit.{/i}{/b}"
-        play sound "Wakeup.mp3" noloop
+        play sound "Click.mp3" noloop
 
     elif pronom == "elle": 
 
         "{b}{i}Quelques instants plus tard, tu te réveilles dans ta chambre, couchée sur ton lit.{/i}{/b}"
-        play sound "Wakeup.mp3" noloop
+        play sound "Click.mp3" noloop
+
+    scene room
+    show screen room 
 
     P "Où... où suis-je ?"
     play sound "Click.mp3" noloop
@@ -8047,7 +8049,7 @@ label test:
     P "Tu ne peut pas rester avec moi [newname] ?"
     play sound "Click.mp3" noloop
 
-    Na "Malheureusement non Malgré que la professeure sait qu'on est inséparable elle veut que je me concentre sur les cours et que je laisse te reposer."
+    Na "Malheureusement non Malgré que la professeure sait qu'on est inséparable elle veut que je me concentre sur les cours et que je te laisse te reposer."
     play sound "Click.mp3" noloop 
 
     P "Ok je vois..."
@@ -8069,7 +8071,7 @@ label test:
 
         "{b}{i} Rattrapper mon retard en math.{/i}{/b}" :
             
-            P "Bon je vais essayser d travailler un peu..."
+            P "Bon je vais essayser de travailler un peu..."
             play sound "Click.mp3" noloop 
 
             "{b}{i} Tu te poses devant ton bureau et commence à étudier.{/i}{/b}"
@@ -8084,24 +8086,37 @@ label test:
             P "Je vais m'arrêter maintenant sinon [newname] va piquer une crise."
             play sound "Click.mp3" noloop 
 
-            "{b}{i} Dix minutes plus tard [newnmae] entre dans le dortoir. {/i}{/b}"
+            "{b}{i} Dix minutes plus tard [newname] entre dans le dortoir. {/i}{/b}"
             play sound "Click.mp3" noloop 
 
-            Na  "Coucou comment ça va [prénom] ?"
+            Na "Coucou comment ça va [prénom] ?"
             play sound "Click.mp3" noloop 
 
-            P  "Euh je vais bien....."
+            P "Euh je vais bien....."
             play sound "Click.mp3" noloop 
 
-            Na  "Tu mens ça se voit tu as encore étudier alors que tu ne devrais pas."
+            Na "Tu mens ça se voit tu as encore étudier alors que tu ne devrais pas."
             play sound "Click.mp3" noloop 
 
-            P  "Ok je l'admet......"
+            P "Ok je l'admet......"
             play sound "Click.mp3" noloop 
 
-            Na "Tu me déçois [prénom]."
+            Na "Tu me déçois [prénom], après ça ne m'étonne pas venant de toi tu te donnes toujours à fond."
             play sound "Click.mp3" noloop 
+
+            if pronom == "il":
+
+                P "Désolé [newname]..."
+                play sound "Click.mp3" noloop
+
+            elif pronom == "elle": 
+
+                P "Désolée [newname]..."
+                play sound "Click.mp3" noloop 
         
+            Na "Ok..."
+            play sound "Click.mp3" noloop
+
         "{b}{i} Se reposer {/i}{/b}" : 
             
             "{b}{i} Tu te reposes pendant trois heures avant de te réveiller {/i}{/b}"
@@ -8113,15 +8128,81 @@ label test:
             "{b}{i} Dix minutes plus tard [newnmae] entre dans le dortoir. {/i}{/b}"
             play sound "Click.mp3" noloop 
 
-            Na  "Coucou comment ça va [prénom] ?"
+            Na "Coucou comment ça va [prénom] ?"
             play sound "Click.mp3" noloop 
 
-            P  "Je vais bien."
+            P "Je vais bien."
             play sound "Click.mp3" noloop  
 
-            P  "Cool alors."
+            Na "Cool alors."
             play sound "Click.mp3" noloop 
 
+    P "Sinon tu vas faire quoi maintenant ?"
+    play sound "Click.mp3" noloop
+
+    Na "Je vais me déconnecter..."
+    play sound "Click.mp3" noloop 
+
+    P "Pas de souci."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} [newname] se déconnecta tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon je vais me recoucher aussi."
+    play sound "Click.mp3" noloop
+
+    "{b}{i} tu te couches tranquillement.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    scene black
+    hide screen room 
+    hide screen day
+
+    "{b}{i} Le lendemain.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    scene room 
+    show screen room
+    show screen day
+    $ day += 1
+
+    play sound "Alarm.mp3" noloop 
+
+    P "Oh déjà..."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} Tu te léves tranquillement et te changes tranquillement {/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Elle est encore déconnectée."
+    play sound "Click.mp3" noloop 
+
+    P "J'imagine qu'elle encore fatiguée à cause d'hier."
+    play sound "Click.mp3" noloop 
+
+    P "Je vais la démarrer."
+    play sound "Menu.mp3" noloop 
+
+    menu :   
+
+        "{b}{i} Démarrer [newname].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+    Na "Démarrage en cours......"
+    play sound "Click.mp3" noloop 
+
+    Na "Bonjour [prénom]."
+    play sound "Click.mp3" noloop 
+
+    P "Coucou comment ça va aujourd'hui ?"
+    play sound "Click.mp3" noloop
+
+    Na "Je vais mais je me suis inquiétée pour toi."
+    play sound "Menu.mp3" noloop 
+
+    P "Ah..."
+    play sound "Menu.mp3" noloop 
 
     return 
 
