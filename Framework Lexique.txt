@@ -1,5 +1,0 @@
-
-région = Danto 
-
-Lycée = Nexus 
-
