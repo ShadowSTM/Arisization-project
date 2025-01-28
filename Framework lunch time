@@ -1,0 +1,126 @@
+
+    scene lunchroom 
+    show screen lunchroom 
+    
+    Na "Bon on va prendre à manger ?"
+    play sound "Click.mp3" noloop 
+
+    P "Ok alors."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} Vous allez vers comptoir pour prendre à manger.{/i}{/b}"
+    play sound "Click.mp3" noloop
+
+    P "Bon voyonns voir aujourd'hui il y a frites-burger ou pizza."
+    play sound "Menu.mp3" noloop 
+
+    menu :    
+
+        "{b}{i}frites-burger.{/i}{/b}" :
+            $ points -= 500 
+        "{b}{i}Pizza.{/i}{/b}" :  
+            $ points -= 300
+
+    P "C'est bon [newname] tu t'es servi ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui c'est bon on peut aller s'asseoir."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} Vous vous asseyez dans le recfectoire.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    P "ça à l'air pas mal ce repas."
+    play sound "Click.mp3" noloop 
+
+    Na "Oui c'est vraiment pas mal."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} Vous continuez de manger puis [I] s'approche de vous calmêment.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    I "Mhmmm [prénom] je voulais savoir si je pouvais manger avec vous."
+    play sound "Menu.mp3" noloop 
+
+    menu :    
+
+        "{b}{i} Accepter [I].{/i}{/b}" :
+            play sound "Menu.mp3" noloop 
+
+    P "Oui il y a pas de soucis tu peux venir."
+    play sound "Click.mp3" noloop 
+
+    I "Merci beaucoup."
+    play sound "Click.mp3" noloop 
+
+    Na "Oui ça fait toujours plaisir d'être avec toi."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} [newname] se met à rougir discrétement.{/i}{/b}"
+    play sound "Click.mp3" noloop 
+
+    I "[newname] ça va ?"
+    play sound "Click.mp3" noloop 
+
+    Na "Oui ça va."
+    play sound "Click.mp3" noloop 
+
+    P "D'habitude tu ne rougis jamais comme ça."
+    play sound "Click.mp3" noloop 
+
+    Na "Je sais mais là c'est personel"
+    play sound "Click.mp3" noloop 
+
+    I "Bon si on discutait des cours."
+    play sound "Click.mp3" noloop 
+
+    P "Oui pourquoi pas."
+    play sound "Click.mp3" noloop 
+
+    Na "Moi ça va aussi."
+    play sound "Click.mp3" noloop 
+
+    I "De toute façon on peut parler pratiquement que de ça."
+    play sound "Click.mp3" noloop 
+
+    P "Oui vu qu'on vie au lycée littérallement"
+    play sound "Click.mp3" noloop 
+
+    I "Mais avant toute chose je n'ai pas vraiment apprécié les propos d'Ayano et [J2] en vers [newname]"
+    play sound "Click.mp3" noloop 
+
+    P "C'est vrai que leurs propos n'étaient pas ouff."
+    play sound "Click.mp3" noloop 
+
+    Na "En plus je leurs ai rien fait."
+    play sound "Click.mp3" noloop 
+
+    I "Je sais que n'as rien fait [newname] mais je ne comprends pas pourquoi elles se permettent de dire qu'[newname] ne t'appartient pas [prénom]."
+    play sound "Click.mp3" noloop 
+
+    P "De toute façon [newname] est à ma création donc je n'ai rien à me reprocher."
+    play sound "Click.mp3" noloop 
+
+    I "Bien maintenant on peut donc clore cette discussion."
+    play sound "Click.mp3" noloop 
+
+    P "Oui et si on discutait du cours de ce matin."
+    play sound "Click.mp3" noloop 
+
+    I "Oui bon idée."
+    play sound "Click.mp3" noloop 
+
+    "{b}{i} Vous conntinuez de discuter des cours pendant que vous mangez jusqu'a la sonnerie.{/i}{/b}"
+    play sound "Bell.mp3" noloop 
+
+    I "Bon on doit retourner en cours."
+    play sound "Click.mp3" noloop
+
+    P "Ok il faut pas qu'on soit en retard."
+    play sound "Click.mp3" noloop 
+
+    I "Ok je vous suis."
+    play sound "Click.mp3" noloop 
+
+    scene black 
+    hide screen lunchroom 
