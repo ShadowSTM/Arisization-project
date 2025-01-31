@@ -1,0 +1,4 @@
+    scene main
+
+    "{b}{i}Chapitre 0 : Arisization Project - Lost Origins Arc{/i}{/b}"
+    play sound "Click.mp3" noloop 
