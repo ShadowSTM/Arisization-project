@@ -1,0 +1,21 @@
+    elif prénom == "Dev" and nom == "Kageno" and pronom == "il" or "elle" and key == "ARIS-DEVS":
+
+        play sound "Menu.mp3" noloop
+        $ newname = renpy.input("Veuillez écrire le nouveau prénom de [A].")
+        $ newname = newname.strip()
+
+        if newname == "Aris":
+
+            "Le prénom a été enregistré dans le système." 
+            play sound "Menu.mp3" noloop
+
+            show screen Dev 
+              
+            jump code
+
+        else:
+
+            "Erreur système. Veuillez réessayer."
+            $ renpy.restart_interaction() 
+            play sound "Menu.mp3" noloop
+            jump identity
