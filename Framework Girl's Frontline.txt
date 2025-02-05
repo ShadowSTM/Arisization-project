@@ -1,16 +1,17 @@
 
 Partie 1 : 
 
-    elif prénom == "Helian" and nom == "Griffin" and pronom == "il" and key == "ARIS-GRFN-M4A1":
+    elif key == "ARIS-GRFN-M4A1":
         $ P = Character('[prénom] [nom]', color="#707070") 
         $ S = Character("Subaru", color="#707070")
         $ origine = "16LAB" 
+        show screen success
         $ success += 1 
 
         "{b}{i} DLC secret intégré déverouillé.{/i}{/b}"
         play sound "Click.mp3" noloop 
 
-        jump début  
+        hide screen success 
 
 Partie 2 : 
 
