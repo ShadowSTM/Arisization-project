@@ -10,6 +10,7 @@
                 xalign 0.5 
 
 
-    show screen success 
+        show screen success
+        $ success += 1 
 
-    hide screen success 
+        hide screen success 
