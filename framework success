@@ -1,0 +1,15 @@
+
+    screen success():
+        frame:
+            xalign 0.99
+            ypos 80
+            has vbox  
+
+            text "Succès débloqué":
+                size 30
+                xalign 0.5 
+
+
+    show screen success 
+
+    hide screen success 
